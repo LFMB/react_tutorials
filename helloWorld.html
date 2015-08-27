@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Render</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js"></script>
+</head>
+<body>
+	<script type="text/jsx">
+	//jsx
+	var App = React.createClass({
+		render: function(){
+			return <h1>Hello World</h1>
+		}
+	});
+	React.render(<App />, document.body);
+
+	</script>
+	<script>
+	//DOM method
+	/*
+		var App = React.createClass({
+			render: function(){
+				return React.DOM.h1(null, "Hi there")
+			}
+		});
+		React.render(App(), document.body);
+
+		//notes: got this error message in console: Uncaught TypeError: Cannot read property '__reactAutoBindMap' of undefined
+	*/
+
+	//create element method
+	/*
+		var App = React.createClass({
+			render:function(){
+				return React.createClass("h1", null, "yo")
+			}
+		});
+
+		React.render(React.createElement(App), document.body);
+	*/	
+	</script>
+
+
+</body>
+</html>
